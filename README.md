@@ -2,11 +2,11 @@
 Technical Test (Take Home Challenge)
 --======================================================================--
 
-**-- DATA MODEL**
+-- **DATA MODEL**
 
 SELECT
 
-**-- store data**
+-- **store data**
 
 s.id AS store_id,
 s.name AS store_name,
@@ -16,12 +16,12 @@ s.country AS store_country,
 s.created_at AS store_created,
 s.typology AS store_typology,
 
-**-- devices**
+-- **devices**
 
 d.id AS device_id,
 d.type AS device_type_id,
 
-**-- transactions**
+-- **transactions**
 
 t.product_name,
 t.product_sku,
