@@ -31,6 +31,9 @@ t.created_at AS transaction_created_at,
 t.happened_at AS transaction_happened_at,
 
 **FROM transaction t
+
 LEFT JOIN device d ON t.device_id = d.id
+
 LEFT JOIN store s ON d.store_id = s.id;**
+
 --======================================================================--
