@@ -6,6 +6,7 @@ Technical Test (Take Home Challenge)
 SELECT
 
 **-- store data**
+
 s.id AS store_id,
 s.name AS store_name,
 s.address AS store_address,
@@ -15,10 +16,12 @@ s.created_at AS store_created,
 s.typology AS store_typology,
 
 **-- devices**
+
 d.id AS device_id,
 d.type AS device_type_id,
 
 **-- transactions**
+
 t.product_name,
 t.product_sku,
 t.category_name,
