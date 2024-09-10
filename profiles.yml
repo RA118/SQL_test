@@ -1,0 +1,17 @@
+# profiles.yml
+
+sql_test_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: 'your_account'  # Your Snowflake account, e.g., 'abc12345.us-east-1'
+      user: 'your_username'  # Snowflake username
+      password: 'your_password'  # Snowflake password
+      role: 'your_role'  # Snowflake role, e.g., 'SYSADMIN'
+      database: 'your_database'  # Name of the Snowflake database
+      warehouse: 'your_warehouse'  # Name of the Snowflake warehouse
+      schema: 'your_schema'  # Schema where models will be deployed
+      authenticator: 'snowflake'  # Use 'externalbrowser' if using SSO authentication
+      threads: 4  # Number of threads for parallel model execution
+      client_session_keep_alive: False  # Keeps the Snowflake session alive (optional)
