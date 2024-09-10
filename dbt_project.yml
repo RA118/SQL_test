@@ -1,0 +1,35 @@
+# dbt_project.yml
+
+# The name of your dbt project
+name: 'sql_test'
+version: '1.0.0'
+
+# The directory where your models (SQL files) are stored
+model-paths: ["models"]
+
+# Define default materialization for models and configure specific model directories if necessary
+models:
+  sql_test:
+    +materialized: view  # Default materialization is view (you can change it to table)
+    staging:
+      +materialized: view  # All models in the staging folder will be materialized as views
+
+# Profile name to match with the connection settings in profiles.yml
+profile: 'sql_test_profile'
+
+# Directory where compiled files and other artifacts are stored
+target-path: "target"
+
+# Directories to clean during the `dbt clean` process
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# Paths for optional components (if needed)
+test-paths: ["tests"]        # Path to your test files
+analysis-paths: ["analysis"]  # Path to analysis files
+seed-paths: ["seeds"]         # Path to seed files (static data)
+macro-paths: ["macros"]       # Path to custom macros
+
+# Define the minimum dbt version required to run this project
+require-dbt-version: ">=1.0.0"
