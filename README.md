@@ -3,6 +3,7 @@ Technical Test (Take Home Challenge)
 --======================================================================--
 
 UPD 2024-09-11
+
 SQLs are optimized for BQ (project clean-wonder-435309-m2) where I created sandbox
 
 dbt files contains connection info and project info
