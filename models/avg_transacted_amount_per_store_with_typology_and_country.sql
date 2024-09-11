@@ -5,9 +5,9 @@ s.country AS store_country,
 s.typology AS store_typology,
 AVG(t.amount) AS transacted_amount
 
-FROM transaction t
-LEFT JOIN device d ON t.device_id = d.id
-LEFT JOIN store s ON d.store_id = s.id
+FROM sandbox.transactions t
+LEFT JOIN sandbox.device d ON t.device_id = d.id
+LEFT JOIN sandbox.store s ON d.store_id = s.id
 
 WHERE LOWER(status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), month) AND TODAY() -- in real life there will be limitation
