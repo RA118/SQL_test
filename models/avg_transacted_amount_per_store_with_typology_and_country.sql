@@ -11,4 +11,4 @@ LEFT JOIN sandbox.store s ON d.store_id = s.id
 
 WHERE LOWER(status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), month) AND TODAY() -- in real life there will be limitation
-GROUP BY 1,2;
+GROUP BY 1,2
