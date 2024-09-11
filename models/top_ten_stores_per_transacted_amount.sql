@@ -4,9 +4,9 @@ s.id AS store_id, -- added because different stores might have same name
 s.name AS store_name,
 SUM(t.amount) AS transacted_amount
 
-FROM transaction t
-LEFT JOIN device d ON t.device_id = d.id
-LEFT JOIN store s ON d.store_id = s.id
+FROM sandbox.transactions t
+LEFT JOIN sandbox.device d ON t.device_id = d.id
+LEFT JOIN sandbox.store s ON d.store_id = s.id
 
 WHERE LOWER(t.status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), MONTH) AND TODAY() -- in real life there will be limitation
