@@ -12,4 +12,4 @@ WHERE LOWER(status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), MONTH) AND TODAY() -- in real life there will be limitation
 GROUP BY 1,2
 ORDER BY 3 DESC
-LIMIT 10;
+LIMIT 10
