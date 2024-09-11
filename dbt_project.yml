@@ -4,6 +4,9 @@
 name: 'sql_test'
 version: '1.0.0'
 
+dbt-cloud:
+    project-id: 70403103960450
+
 # The directory where your models (SQL files) are stored
 model-paths: ["models"]
 

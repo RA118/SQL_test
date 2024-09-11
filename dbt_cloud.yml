@@ -1,0 +1,14 @@
+version: "1"
+context:
+  active-host: "ze273.us1.dbt.com"
+  active-project: "70403103960450"
+projects:
+  - project-name: "Analytics"
+    project-id: "70403103960450"
+    account-name: "None"
+    account-id: "70403103951475"
+    account-host: "ze273.us1.dbt.com"
+    token-name: "cloud-cli-87ae"
+    token-value: "dbtu_iN3zfGcI2kz_7ODyDc0rtGVTg7zR44tw48-2cT9gM1hFmrrN-E"
+
+
