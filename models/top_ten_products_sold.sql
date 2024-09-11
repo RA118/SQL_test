@@ -4,7 +4,7 @@ t.product_sku, -- added because different products might have same name
 t.product_name AS product_name,
 SUM(t.amount) AS transacted_amount
 
-FROM transaction t
+FROM sandbox.transactions t
 --LEFT JOIN device d ON t.device_id = d.id -- don't need them here as all the fields are from t
 --LEFT JOIN store s ON d.store_id = s.id -- don't need them here as all the fields are from t
 
