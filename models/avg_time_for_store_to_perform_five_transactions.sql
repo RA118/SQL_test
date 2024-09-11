@@ -32,4 +32,3 @@ FROM
 	WHERE max_transactions_per_store >=5 -- stores have 5 or more transactions
 	AND nth_transaction = 1 OR nth_transaction = 5 -- we need 1st and 5th
 )
-;
