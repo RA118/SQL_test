@@ -1,15 +1,8 @@
 
-  
-    
 
-    create or replace table `clean-wonder-435309-m2`.`dbt_ra118`.`avg_time_for_store_to_perform_five_transactions`
-      
-    
-    
-
-    OPTIONS()
-    as (
-      SELECT AVG(diff_hours) AS avg_time --overall avg
+  create or replace view `clean-wonder-435309-m2`.`dbt_ra118`.`avg_time_for_store_to_perform_five_transactions`
+  OPTIONS()
+  as SELECT AVG(diff_hours) AS avg_time --overall avg
 FROM
 	(SELECT 
 	-- here we calculate differences
@@ -42,6 +35,5 @@ FROM
 			)
 	WHERE max_transactions_per_store >=5 -- stores have 5 or more transactions
 	AND nth_transaction = 1 OR nth_transaction = 5 -- we need 1st and 5th
-)
-    );
-  
+);
+

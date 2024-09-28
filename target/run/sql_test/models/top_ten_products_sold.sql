@@ -1,15 +1,8 @@
 
-  
-    
 
-    create or replace table `clean-wonder-435309-m2`.`dbt_ra118`.`top_ten_products_sold`
-      
-    
-    
-
-    OPTIONS()
-    as (
-      -- Top 10 products sold
+  create or replace view `clean-wonder-435309-m2`.`dbt_ra118`.`top_ten_products_sold`
+  OPTIONS()
+  as -- Top 10 products sold
 SELECT
 t.product_sku, -- added because different products might have same name
 t.product_name AS product_name,
@@ -23,6 +16,5 @@ WHERE LOWER(status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), MONTH) AND TODAY() -- in real life there will be limitation
 GROUP BY 1,2
 ORDER BY 3 DESC
-LIMIT 10
-    );
-  
+LIMIT 10;
+
