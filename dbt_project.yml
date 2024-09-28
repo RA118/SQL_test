@@ -13,7 +13,7 @@ model-paths: ["models"]
 # Define default materialization for models and configure specific model directories if necessary
 models:
   sql_test:
-    +materialized: view  # Default materialization is view (you can change it to table)
+    +materialized: table  # Default materialization is view (you can change it to table)
     staging:
       +materialized: view  # All models in the staging folder will be materialized as views
 

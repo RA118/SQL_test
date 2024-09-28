@@ -1,15 +1,8 @@
 
-  
-    
 
-    create or replace table `clean-wonder-435309-m2`.`dbt_ra118`.`top_ten_stores_per_transacted_amount`
-      
-    
-    
-
-    OPTIONS()
-    as (
-      -- Top 10 stores per transacted amount
+  create or replace view `clean-wonder-435309-m2`.`dbt_ra118`.`top_ten_stores_per_transacted_amount`
+  OPTIONS()
+  as -- Top 10 stores per transacted amount
 SELECT
 s.id AS store_id, -- added because different stores might have same name
 s.name AS store_name,
@@ -22,6 +15,5 @@ LEFT JOIN sandbox.store s ON d.store_id = s.id
 WHERE LOWER(t.status) = 'accepted'
 --AND DATE(t.happened_at) BETWEEEN DATETRUNC(TODAY(), MONTH) AND TODAY() -- in real life there will be limitation
 GROUP BY 1,2 ORDER BY 3 DESC
-LIMIT 10
-    );
-  
+LIMIT 10;
+
