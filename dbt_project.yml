@@ -1,7 +1,7 @@
 # dbt_project.yml
 
 # The name of your dbt project
-name: 'some_new_name'
+name: 'some_new_name2'
 version: '1.0.0'
 
 dbt-cloud:
